@@ -1,0 +1,27 @@
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name = 'Sonatype Nexus Snapshots'
+            url = 'https://oss.sonatype.org/content/repositories/snapshots/'
+        }
+    }
+    dependencies {
+        classpath 'net.wasdev.wlp.gradle.plugins:liberty-gradle-plugin:2.1.1-SNAPSHOT'
+    }
+}
+
+apply plugin: 'liberty' 
+
+dependencies {
+    libertyRuntime group: 'io.openliberty', name: 'openliberty-runtime', version: '18.0.0.2'
+}
+
+hello { 
+    dependsOn installLiberty
+    message = "Hi"
+    recipient = "Gradle"
+}
+
+
