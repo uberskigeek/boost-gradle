@@ -8,11 +8,15 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.wasdev.wlp.gradle.plugins:liberty-gradle-plugin:2.1.1-SNAPSHOT'
+        classpath 'net.wasdev.wlp.gradle.plugins:liberty-gradle-plugin:2.6-SNAPSHOT'
     }
 }
 
+repositories {
+    mavenCentral()
+}
 apply plugin: 'liberty' 
+apply plugin: org.example.greeting.GreetingPlugin
 
 dependencies {
     libertyRuntime group: 'io.openliberty', name: 'openliberty-runtime', version: '18.0.0.2'
