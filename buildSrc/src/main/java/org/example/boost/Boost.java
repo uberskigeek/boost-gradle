@@ -1,9 +1,9 @@
-package org.example.greeting;
+package org.example.boost;
 
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;
 
-public class Greeting extends DefaultTask {
+public class Boost extends DefaultTask {
     private String message;
     private String recipient;
 
