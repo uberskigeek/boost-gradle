@@ -16,13 +16,14 @@ repositories {
     mavenCentral()
 }
 apply plugin: 'liberty' 
-apply plugin: org.example.greeting.GreetingPlugin
+//apply plugin: org.example.boost.BoostPlugin
+apply plugin: org.example.boost.BoostPlugin
 
 dependencies {
     libertyRuntime group: 'io.openliberty', name: 'openliberty-runtime', version: '18.0.0.2'
 }
 
-hello { 
+boost { 
     dependsOn installLiberty
     message = "Hi"
     recipient = "Gradle"
